@@ -1,0 +1,105 @@
+﻿@model IEnumerable<UniversityApplicationFinal.Models.RegisterModel>
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "AdminPage";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+@{
+   
+    var userEmail = HttpContextAccessor.HttpContext.Session.GetString("userEmail");
+}
+<h1 style="text-align:center"  >Welcome Admin</h1>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-light">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="btn btn-secondary" asp-action="Create">Create New</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item ">
+                        <a style="text-decoration:none">Welcome to @userEmail</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a asp-action="Login" asp-controller="Account" class="btn btn-danger float-end">Logout</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</nav>
+<table class="table table-bordered table-responsive table-hover table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PanNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PanNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+              
+                    <button class="btn btn-success" onclick="ChangeUserStatus(@item.Id,true)">Approve</button>
+                    <button class="btn btn-danger" onclick="ChangeUserStatus(@item.Id,false)">Reject</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    function ChangeUserStatus(id, isApproved) {
+        debugger;
+        var dataObj = {
+            id: id,
+            isApproved: isApproved,
+            email: '',
+            panNo: '',
+            status: 'Pending',
+        };
+        if (confirm("Are you sure to continue?")) {
+            $.ajax({
+                method: "GET",
+                url: "https://localhost:7054/api/UserAPi/ChangeUserStatus?id=" + id + "&isApprove=" + isApproved,
+              
+                success: function(response) {
+                    location.reload()
+                    console.log(response)
+                },
+                failure: function(response) {
+                    
+                },
+                error: function(response) {
+                  
+                    location.reload()
+                }
+            });
+        }
+
+    }
+</script>
+

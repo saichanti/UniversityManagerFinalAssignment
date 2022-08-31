@@ -1,0 +1,8 @@
+﻿C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityClassLibrary\Class1.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityClassLibrary\Data\Migrations\20220828062738_initial.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityClassLibrary\Data\Migrations\20220828062738_initial.Designer.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityClassLibrary\Data\Migrations\UniversityDbContextModelSnapshot.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityClassLibrary\Model\RoleMaster.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityClassLibrary\Model\University.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityClassLibrary\Model\UniversityDbContext.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityClassLibrary\Model\Users.cs

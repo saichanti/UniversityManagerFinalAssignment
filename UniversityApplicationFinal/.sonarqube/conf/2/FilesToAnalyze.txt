@@ -1,0 +1,16 @@
+﻿C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\Controllers\AccountController.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\Controllers\UniversityApiController.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\Controllers\UserAPiController.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\Controllers\WeatherForecastController.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\Mapper\MapperClass.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\Program.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\ViewModels\LoginViewModel.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\ViewModels\UserViewModel.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\WeatherForecast.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\obj\Debug\net6.0\UniversityApi.GlobalUsings.g.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\obj\Debug\net6.0\UniversityApi.AssemblyInfo.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\obj\Debug\net6.0\UniversityApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\appsettings.Development.json
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\appsettings.json
+C:\Users\Sai Kumar\Desktop\C# Trining\UniversityApplicationFinal\UniversityApi\Properties\launchSettings.json

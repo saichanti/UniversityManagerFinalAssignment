@@ -1,0 +1,83 @@
+﻿@model UniversityApplicationFinal.Models.RegisterModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="text-align:center;color:blue">  New Users Registration</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input id="check" asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+                <p class="text-danger" id="errorMessage"></p>
+            </div>
+            <div class="form-group">
+                <label asp-for="PanNo" class="control-label"></label>
+                <input asp-for="PanNo" class="form-control" />
+                <span asp-validation-for="PanNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" type="password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword" class="control-label"></label>
+                <input asp-for="ConfirmPassword" class="form-control" type="password" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" asp-action="Register" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#check").blur(function() {
+            $.ajax({
+                method: "GET",
+                url: "/Account/EmailAvailable",
+                data: { "email": $("#check").val() },
+
+                success: function(response) {
+                    //alert(response);
+                    if (response.length !== 0) {
+                        $("#errorMessage").text(response)
+                        $("#check").focus()
+                       
+                    }
+                    else {
+                        $("#errorMessage").text('')
+                    }
+
+                },
+                failure: function(response) {
+
+                },
+                error: function(response) {
+
+                }
+            });
+        });
+    });
+
+
+</script>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
+
